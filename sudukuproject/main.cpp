@@ -54,6 +54,5 @@ int main(int argc ,char *argv[])
 	
 	outFile.close(); 
 
-	system("pause");
 	return 0;
 } 
