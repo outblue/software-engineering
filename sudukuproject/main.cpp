@@ -13,8 +13,7 @@ int main(int argc ,char *argv[])
 
 	srand((unsigned)time(NULL));		//随机种子 
 	
-	ofstream outFile;			//输出文件“sudoku.txt” 
-	outFile.open("sudoku.txt");
+	freopen("sudoku.txt","w",stdout);			//输出文件“sudoku.txt” 
 		
 	if(n<1000000 && n>1)			//判断输入的变量是否为int型 
 	{
@@ -32,13 +31,13 @@ int main(int argc ,char *argv[])
 				{
 					for(k=0;k<9;k++)
 					{
-						outFile << num1[j][k] << " ";
+						cout << num1[j][k] << " ";
 					}
 		
-					outFile << endl;
+					cout << endl;
 				}
 		
-				outFile << endl;		//每个数独阵间隔一个空行 
+				cout << endl;		//每个数独阵间隔一个空行 
 			}
 			else
 			{
@@ -52,7 +51,6 @@ int main(int argc ,char *argv[])
 		cout << "输入错误，请重试。" << endl;		//若变量不为int型，则输出错误提示 
 	}
 	
-	outFile.close(); 
 
 	return 0;
 } 
